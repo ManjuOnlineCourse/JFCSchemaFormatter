@@ -5,7 +5,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class Formatter {
@@ -161,7 +164,8 @@ public class Formatter {
 		}
 		//file writter
 		try{    
-			FileWriter fw=new FileWriter(outputFile);  
+			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+			FileWriter fw=new FileWriter(outputFile+"Output"+timeStamp+".txt");  
 			for (String string : finalData) {
 				fw.write(string);
 			}
@@ -171,6 +175,6 @@ public class Formatter {
 		{
 			System.out.println(e);
 			}    
-		System.out.println("Success!!! check the output.txt file on your system");
+		System.out.println("Success!!! check the output.txt file path --> "+outputFile);
 	}
 }
