@@ -1,14 +1,15 @@
 package jfcFormatter;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;  
-class file1 {  
-	public static void main(String args[])  
-	{  
+import java.util.List;
+
+public class Formatter {
+	public static void jfcFormatter(String inputFile, String outputFile) {
 		List<String> finalData = new ArrayList<String>();
 		String initialData = "{\r\n"
 				+ "	\"SubmissionData\": {\r\n"
@@ -18,7 +19,7 @@ class file1 {
 		finalData.add(initialData);
 		try  
 		{  
-			File file=new File("C:\\Users\\91814\\Desktop\\Result\\Input.txt");    //creates a new file instance  
+			File file=new File(inputFile);    //creates a new file instance  
 			FileReader fr=new FileReader(file);   //reads the file  
 			BufferedReader br=new BufferedReader(fr);  //creates a buffering character input stream  
 			StringBuffer sb=new StringBuffer();    //constructs a string buffer with no characters  
@@ -160,7 +161,7 @@ class file1 {
 		}
 		//file writter
 		try{    
-			FileWriter fw=new FileWriter("C:\\Users\\91814\\Desktop\\Result\\Output.txt");  
+			FileWriter fw=new FileWriter(outputFile);  
 			for (String string : finalData) {
 				fw.write(string);
 			}
@@ -170,6 +171,6 @@ class file1 {
 		{
 			System.out.println(e);
 			}    
-		System.out.println("Success...");    
-	} 
+		System.out.println("Success!!! check the output.txt file on your system");
+	}
 }
