@@ -1,12 +1,16 @@
 Json formatter --> https://www.jsonformatter.io/
 
 Paste your Json data in above formatter.
-save it into Input file.
+save it into Input.txt file.
+Make sure same Input.txt file path given in class file.
 
 ------------------------------------------------------------------------------------------
-Execute the programm
-you can see the output of the progrram into Output file.
+Make sure Output.txt file path given in class file.
 
-paste that output data and paste it in https://www.jsonformatter.io/
+Execute the program
+you can see the output of the program into Output.txt file.
+
+
+copy that output data and paste it in https://www.jsonformatter.io/
 
 Here JFC schema is Ready to use.
