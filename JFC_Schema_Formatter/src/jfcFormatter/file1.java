@@ -157,8 +157,7 @@ class file1 {
 		catch(IOException e)  
 		{  
 			e.printStackTrace();  
-		}  
-
+		}
 		//file writter
 		try{    
 			FileWriter fw=new FileWriter("C:\\Users\\91814\\Desktop\\Result\\Output.txt");  
