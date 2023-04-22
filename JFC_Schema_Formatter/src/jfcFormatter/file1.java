@@ -15,7 +15,6 @@ class file1 {
 				+ "		\"name\": \"SubmissionData\",\r\n"
 				+ "		\"dataType\": \"Obejct\",\r\n"
 				+ "		\"Properties\": {";
-		System.out.println(initialData);
 		finalData.add(initialData);
 		try  
 		{  
@@ -45,16 +44,13 @@ class file1 {
 					if(string.equals("]"))
 					{
 						string="}";
-						System.out.println(string);
 						finalData.add(string);
 					}
 					else if (string.equals("],")) {
 						string = "},";
-						System.out.print(string);
 						finalData.add(string);
 					}
 					else {
-						System.out.print(string);
 						finalData.add(string);
 					}
 
@@ -73,12 +69,10 @@ class file1 {
 							{
 								String doubleCoteRemovedString = string2.replaceAll("\"", "");
 								value =  "\"" + doubleCoteRemovedString+ "\""+":" +"{\n" + "\"" +"name" + "\"" +":"+"\""+ doubleCoteRemovedString +"\""+",";
-								System.out.println(value);
 								finalData.add(value);
 							}
 							else if (string2.equals("},") ) {
 								value =  ",";
-								System.out.println(value);
 								finalData.add(value);
 							}
 							else {
@@ -93,13 +87,10 @@ class file1 {
 									if(string2.equals("true,")||string2.equals("True,")||string2.equals("TRUE,"))
 									{
 										String temp ="\""+"dataType"+"\":"+"\""+"True"+"\""+"\n},";
-										System.out.println(temp);
-
 										finalData.add(temp);
 									}
 									else {
 										String temp1 = "\""+"dataType"+"\":"+"\""+"True"+"\""+"\n}";
-										System.out.println(temp1);
 										finalData.add(temp1);
 									}
 								}
@@ -107,29 +98,24 @@ class file1 {
 									if(string2.equals("false,")||string2.equals("False,")||string2.equals("FALSE,"))
 									{
 										String temp3 = "\""+"dataType"+"\":"+"\""+"False"+"\""+"\n},";
-										System.out.println(temp3);
 										finalData.add(temp3);
 									}
 									else {
 										String temp4 = "\""+"dataType"+"\":"+"\""+"False"+"\""+"\n}";
-										System.out.println(temp4);
 										finalData.add(temp4);
 									}
 								}
 								else if(string2.equals("[{") || string2.equals("[")) {
 									String s="\"properties\":{";
 									s = "\""+"dataType"+"\":"+"\""+"Array"+"\",\n"+s;
-									System.out.println(s);
 									finalData.add(s);
 								}
 								else if(string2.equals("},")) {
-									System.out.println(",");
 									finalData.add(",");
 								}
 								else if(string2.equals("{")) {
 									String s="\"properties\":{";
 									s = "\""+"dataType"+"\":"+"\""+"Object"+"\","+"\n"+s;
-									System.out.println(s);
 									finalData.add(s);
 
 								}
@@ -137,12 +123,10 @@ class file1 {
 									if(string2.contains(","))
 									{
 										String temp5 = "\""+"dataType"+"\":"+"\""+"Number"+"\""+"\n},";
-										System.out.println(temp5);
 										finalData.add(temp5);
 									}
 									else {
 										String temp6 = "\""+"dataType"+"\":"+"\""+"Number"+"\""+"\n}";
-										System.out.println(temp6);
 										finalData.add(temp6);
 
 									}
@@ -150,13 +134,11 @@ class file1 {
 							}
 							else if (!string2.contains(",")) {
 								String temp7 = "\""+"dataType"+"\":"+"\""+"Text"+"\""+"\n}";
-								System.out.print(temp7);
 								finalData.add(temp7);
 
 							}
 							else {
 								String temp8 ="\""+"dataType"+"\":"+"\""+"Text"+"\""+"\n},";
-								System.out.println(temp8);
 								finalData.add(temp8);
 							}
 						}
@@ -165,7 +147,6 @@ class file1 {
 
 				}
 			}
-			System.out.println("}}");
 			finalData.add("}}");
 			//			System.out.println("__________________________________________________");
 			//			for (String string : finalData) {
