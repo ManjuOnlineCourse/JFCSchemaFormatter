@@ -1,14 +1,14 @@
 Json formatter --> https://www.jsonformatter.io/
 
 Paste your Json data in above formatter.
-save it into Input.txt file.
-Make sure same Input.txt file path given in class file.
+save it into the Input.txt file.
+Make sure same Input.txt file path given in the class file.
 
 ------------------------------------------------------------------------------------------
-Make sure Output.txt file path given in class file.
+Make sure Output.txt file path given in the class file.
 
 Execute the program
-you can see the output of the program into Output.txt file.
+you can see the output of the program into the Output.txt file.
 
 
 copy that output data and paste it in https://www.jsonformatter.io/
