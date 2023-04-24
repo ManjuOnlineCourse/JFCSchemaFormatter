@@ -5,8 +5,8 @@ import java.util.Scanner;
 class Jfc_Main {  
 	public static void main(String args[])  
 	{  
-		String inputFile = "C:\\Users\\91814\\Desktop\\Result\\Input.txt";
-		String outputFile = "C:\\Users\\91814\\Desktop\\Result\\";
+		String inputFile = "C:\\result\\Input.txt";
+		String outputFile = "C:\\result\\Output.txt";
 		
 //		Scanner sc= new Scanner(System.in); 
 //		System.out.print("Input file path: ");  

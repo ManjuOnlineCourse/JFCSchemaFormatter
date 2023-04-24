@@ -1,18 +1,14 @@
 package jfcFormatter;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
-public class Formatter {
-	public static void jfcFormatter(String inputFile, String outputFile) {
+import java.util.List;  
+class file1 {  
+	public static void main(String args[])  
+	{  
 		List<String> finalData = new ArrayList<String>();
 		String initialData = "{\r\n"
 				+ "	\"SubmissionData\": {\r\n"
@@ -23,7 +19,7 @@ public class Formatter {
 		finalData.add(initialData);
 		try  
 		{  
-			File file=new File(inputFile);    //creates a new file instance  
+			File file=new File("C:\\Users\\91814\\Desktop\\Result\\Input.txt");    //creates a new file instance  
 			FileReader fr=new FileReader(file);   //reads the file  
 			BufferedReader br=new BufferedReader(fr);  //creates a buffering character input stream  
 			StringBuffer sb=new StringBuffer();    //constructs a string buffer with no characters  
@@ -190,7 +186,7 @@ public class Formatter {
 
 		//file writter
 		try{    
-			FileWriter fw=new FileWriter(outputFile);  
+			FileWriter fw=new FileWriter("C:\\Users\\91814\\Desktop\\Result\\Output.txt");  
 			for (String string : finalData) {
 				fw.write(string);
 			}
@@ -200,6 +196,6 @@ public class Formatter {
 		{
 			System.out.println(e);
 			}    
-		System.out.println("Success!!! check the output.txt file path --> "+outputFile);
-	}
+		System.out.println("Success...");    
+	} 
 }
